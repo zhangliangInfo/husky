@@ -1,0 +1,34 @@
+{
+  "name": "husky-projec",
+  "version": "1.0.0",
+  "description": "husky-project",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "precommit": "npm run checktest && npm run test",
+    "checktest": "ts-node checkTest.ts",
+    "test": "npm run checktest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangliangInfo/husky.git"
+  },
+  "author": "zhangliang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhangliangInfo/husky/issues"
+  },
+  "homepage": "https://github.com/zhangliangInfo/husky#readme",
+  "devDependencies": {
+    "execa": "^5.1.1",
+    "husky": "^7.0.1",
+    "jest": "^27.0.6",
+    "simple-git": "^2.40.0",
+    "typescript": "^4.3.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run checktest"
+    }
+  }
+}
